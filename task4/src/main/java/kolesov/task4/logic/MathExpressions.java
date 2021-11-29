@@ -1,6 +1,7 @@
-package task3;
+package kolesov.task4.logic;
 
-import task3.expressions.Expression;
+import kolesov.task4.MyApplication;
+import kolesov.task4.logic.expressions.Expression;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,14 +30,14 @@ public class MathExpressions {
         List<Double> results = new ArrayList<>();
         if (print) {
             for (int i = 0; i < expressions.size(); i++) {
-                System.out.println("%d.  ".formatted(i + 1) + expressions.get(i).toString() + " Параметры: " + parameters);
+                MyApplication.getOutputStream().println(expressions.get(i).toString() + " Параметры: " + parameters);
                 try {
                     double result = expressions.get(i).Execute(print);
-                    System.out.println("    Результат: " + result);
+                    MyApplication.getOutputStream().println("    Результат: " + result);
                     results.add(result);
                 } catch (Exception e) {
                     results.add(null);
-                    System.out.println("Ошибка: " + e.getMessage());
+                    MyApplication.getOutputStream().println("Ошибка: " + e.getMessage());
                 }
             }
         } else {

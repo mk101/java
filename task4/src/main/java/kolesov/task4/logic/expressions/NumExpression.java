@@ -1,7 +1,7 @@
-package task3.expressions;
+package kolesov.task4.logic.expressions;
 
-import task3.UndefinedParameterException;
-import task3.ZeroDivException;
+import kolesov.task4.logic.UndefinedParameterException;
+import kolesov.task4.logic.ZeroDivException;
 
 public class NumExpression implements Expression {
     private final double val;

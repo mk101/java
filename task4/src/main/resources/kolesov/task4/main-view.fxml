@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.TableColumn?>
+<GridPane xmlns:fx="http://javafx.com/fxml"
+          fx:controller="kolesov.task4.controllers.MainWindowController">
+
+    <ListView fx:id="expressionsList"  GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+    <TableView fx:id="parametersTable" GridPane.rowIndex="0"    GridPane.columnIndex="1">
+        <columns>
+            <TableColumn fx:id="nameColumn"  text="Название"/>
+            <TableColumn fx:id="valueColumn" text="Значение"/>
+        </columns>
+    </TableView>
+    <ButtonBar GridPane.columnIndex="0" GridPane.rowIndex="1">
+        <buttons>
+            <Button onAction="#addExpression" text="Добавить выражение"/>
+            <Button onAction="#addParameter"  text="Добавить параметр"/>
+            <Button onAction="#execute"       text="Вычислить" fx:id="executeButton"/>
+        </buttons>
+    </ButtonBar>
+    <ButtonBar GridPane.columnIndex="1" GridPane.rowIndex="1">
+        <buttons>
+            <Button fx:id="deleteExpressionButton" onAction="#deleteExpression" text="Удалить выражение"/>
+            <Button fx:id="deleteParameterButton"  onAction="#deleteParameter"  text="Удалить параметр"/>
+        </buttons>
+    </ButtonBar>
+</GridPane>

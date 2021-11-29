@@ -1,4 +1,4 @@
-package task3.expressions;
+package kolesov.task4.logic.expressions;
 
 public class ExpressionFactory {
     public static Expression Create(int value) {
@@ -14,6 +14,7 @@ public class ExpressionFactory {
             case PLUS       -> new SumExpression(e1, e2);
             case MULTIPLY   -> new MultiplyExpression(e1, e2);
             case DIVIDE     -> new DivideExpression(e1, e2);
+            case MINUS      -> new SubExpression(e1, e2);
         };
     }
 }

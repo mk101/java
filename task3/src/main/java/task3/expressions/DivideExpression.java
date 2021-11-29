@@ -1,6 +1,5 @@
 package task3.expressions;
 
-import task3.Expression;
 import task3.ZeroDivException;
 import task3.UndefinedParameterException;
 

@@ -1,7 +1,8 @@
-package task3.expressions;
+package kolesov.task4.logic.expressions;
 
-import task3.ZeroDivException;
-import task3.UndefinedParameterException;
+import kolesov.task4.MyApplication;
+import kolesov.task4.logic.ZeroDivException;
+import kolesov.task4.logic.UndefinedParameterException;
 
 public class SumExpression implements Expression {
     private final Expression e1;
@@ -23,7 +24,7 @@ public class SumExpression implements Expression {
         double e2Value = e2.Execute(print);
 
         if (print) {
-            System.out.println(this.toString() + " = " + (e1Value + e2Value));
+            MyApplication.getOutputStream().println(this.toString() + " = " + (e1Value + e2Value));
         }
         return e1Value + e2Value;
     }

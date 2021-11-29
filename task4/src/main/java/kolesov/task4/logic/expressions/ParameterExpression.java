@@ -1,6 +1,6 @@
-package task3.expressions;
+package kolesov.task4.logic.expressions;
 
-import task3.UndefinedParameterException;
+import kolesov.task4.logic.UndefinedParameterException;
 
 public class ParameterExpression implements Expression {
     private final String name;

@@ -1,4 +1,7 @@
-package task3;
+package kolesov.task4.logic.expressions;
+
+import kolesov.task4.logic.UndefinedParameterException;
+import kolesov.task4.logic.ZeroDivException;
 
 public interface Expression {
     double Execute() throws ZeroDivException, UndefinedParameterException;

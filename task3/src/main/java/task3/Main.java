@@ -1,5 +1,6 @@
 package task3;
 
+import task3.expressions.Expression;
 import task3.expressions.ExpressionFactory;
 import task3.expressions.ExpressionSign;
 
@@ -9,7 +10,7 @@ import java.util.List;
 import java.util.Map;
 
 public class Main {
-    public static void main(String[] args) throws UndefinedParameterException, ZeroDivException {
+    public static void main(String[] args) {
         List<Expression> expressions = new ArrayList<>();
         expressions.add(
                 ExpressionFactory.Create(ExpressionSign.PLUS,
@@ -40,11 +41,6 @@ public class Main {
         parameters.put("b", 24);
 
         MathExpressions mathExpressions = new MathExpressions(expressions, parameters);
-
-        for (int i = 0; i < expressions.size(); i++) {
-            System.out.println("%d.  ".formatted(i+1) + expressions.get(i).toString() + " Параметры: " + parameters);
-            double result = expressions.get(i).Execute(true);
-            System.out.println("    Результат: " + result);
-        }
+        var res = mathExpressions.EvaluateExpressions(true);
     }
 }
