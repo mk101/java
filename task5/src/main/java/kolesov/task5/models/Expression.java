@@ -1,0 +1,9 @@
+package kolesov.task5.models;
+
+public class Expression {
+    public String value;
+
+    public Expression(String value) {
+        this.value = value;
+    }
+}

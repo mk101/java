@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="kolesov.task5.controllers.AddExpressionViewController">
+
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
+
+    <TextField fx:id="expressionField" />
+    <ButtonBar>
+        <buttons>
+            <Button fx:id="okButton" onAction="#handleOk" text="ОК"/>
+            <Button onAction="#handleCancel" text="Отмена"/>
+        </buttons>
+    </ButtonBar>
+</VBox>
